@@ -1,0 +1,328 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+.header{
+    
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, .1);
+    
+}
+.nav .menu{
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav .menu a{
+    text-decoration: none;
+    color: black;
+}
+
+.move{
+    height: 100vh;
+    width: 100%;
+    background-image: url(img/sky.jpg);
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    overflow-x: hidden;
+
+}
+
+.highway{
+    height: 180px;
+    width: 500%;
+    display: block;
+    background-image: url(img/road.jpg);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-repeat: repeat-x;
+    animation: highway 10s linear infinite;
+}
+@keyframes highway {
+    100%{
+        transform: translateX(-1400px);
+    }
+}
+
+.city{
+    height: 450px;
+    width: 500%;
+    display: block;
+    background-image: url(img/11.png);
+    position: absolute;
+    bottom: 180px;
+    left: 0;
+    right: 0;
+
+    z-index: 1;
+    background-repeat: repeat-x;
+    animation: city 10s linear infinite;
+}
+@keyframes city {
+    100%{
+        transform: translateX(-600px);
+    }
+}
+
+.bus{
+    width: 400px;
+    height: auto;
+    left: 35%;
+    bottom: 90px;
+    position: absolute;
+    z-index: 2;
+
+}
+
+.bus img{
+    width: 100%;
+    
+}
+
+.wheel{
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    bottom: 64px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 3;
+}
+
+.wheel img{
+    animation: wheel 1s linear infinite;        
+}
+.frontwheel{
+    top: 40px;
+    left:63px;
+    position: absolute;
+}
+.backwheel{
+    position: absolute;
+    left: -95px;
+    top: 40px;
+}
+@keyframes wheel {
+    100%{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.info{
+    width: 403px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.info .h{
+    font-size: 35px;
+    font-weight: 300;
+    margin-top: 10px;
+    letter-spacing: 8px;
+}
+.info p{
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+.btn{
+    text-align: center;
+    margin-bottom: 70px;
+}
+.btn button{
+    padding: 20px;
+    background-color: #00095e;
+    border-radius: 10px;
+    border: black;
+    box-shadow: inset 0px 0px 20px #000;
+    color: white;
+    cursor: pointer;
+    transition: all 1.2s ease;
+}
+.btn button:hover{
+    background-color: yellow;
+    color: black;
+    
+}
+
+.head1{
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+}
+
+.list h1{
+    font-size: 40px;
+    text-align: center;
+}
+
+section{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: back 10s infinite ease-in-out;
+}
+
+.change_content::after{
+    content: '';
+    animation: changetext 10s infinite linear;
+    color: #00b894;
+
+}
+@keyframes changetext {
+    0% {content: "Darjeeling";}
+    20% {content: "Delhi";}
+    35% {content: "Maharashtra";}
+    60% {content: "Kashmir";}
+    80% {content: "Kerala";}
+    100% {content: "Jaipur";}
+
+}
+@keyframes back {
+    0% {background-image: url(img/darjeeling.jpg);}
+    20% {background-image: url(img/delhi.jpg);}
+    35% {background-image: url(img/maha.jpg);}
+    60% {background-image: url(img/kashmir.jpg);}
+    80% {background-image: url(img/kerala.jpg);}
+    100% {background-image: url(img/jaipur.jpg)}
+}
+
+.about{
+    padding-top: 60px;
+}
+.about .column {
+    float: left;
+    width: 50%;
+  }
+  
+.about .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.abt{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.column .head3{
+    
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 4px
+    
+}
+.column .info1{
+    width: 60%;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.8;
+    
+}
+
+.btn1{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.btn1 button{
+    padding: 20px;
+    text-align: center;
+    background-color: yellow;
+    border-radius: 10px;
+    border: black;
+    box-shadow: inset 0px 0px 20px #000;
+    color: black;
+    cursor: pointer;
+    transition: all 1.2s ease;
+}
+.btn1 button:hover{
+    background-color: #00095e;
+    color: white;
+    
+}
+
+.footer{
+    height: 50vh;
+    margin-top: 70px;
+    padding: 5px;
+    background-color: #00095e;
+    box-shadow: 50px 50px 70px #0d173a inset;
+
+}
+.row1{
+    height: 50vh;
+    color: white;
+}
+
+.column1 {
+    float: left;
+    width: 33%;
+    height: 50vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.column1 h1{
+    margin-bottom: 30px;
+}
+.column p{
+    width: 307px;
+}
+.column2 {
+    float: left;
+    height: 50vh;
+    width: 17%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.column3 {
+    float: left;
+    width: 17%;
+    height: 50vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.column4 {
+    width: 33%;
+    float: left;
+    height: 50vh;
+    display: block;
+    align-items: center;
+    text-align: center;
+    
+}
+.column4 h3{
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+}
+.column4 p{
+    margin-top: 10px;
+}
+  
+.row1:after {
+    content: "";
+    display: table;
+    clear: both;
+}
